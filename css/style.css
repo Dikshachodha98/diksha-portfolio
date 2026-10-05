@@ -771,7 +771,7 @@ a {
         display:flex;
         align-items:center;
         justify-content:center;
-        font-size:25px;
+        font-size:20px;
         cursor:pointer;
         z-index:1001;
     }
@@ -831,10 +831,13 @@ a {
         color:#fff;
     }
     .hero-section{
-        /* min-height:auto; */
+        min-height:auto;
         padding:80px 20px 100px;
     }
-
+    .hero-wrapper::after
+    {
+        content: none;
+    }
     .hero-content{
         max-width:100%;
     }
