@@ -771,7 +771,7 @@ a {
         display:flex;
         align-items:center;
         justify-content:center;
-        font-size:30px;
+        font-size:15px;
         cursor:pointer;
         z-index:1001;
     }
@@ -1402,7 +1402,23 @@ a {
         font-size:20px;
     }
     .contact-section{
-        padding:80px 20px;
+        padding:70px 30px;
+    }
+
+    .contact-wrapper{
+        grid-template-columns:1fr;
+        gap:30px;
+        margin-top:50px;
+    }
+
+    .contact-info{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .contact-form{
+        padding:30px;
     }
 
     .contact-section h2{
@@ -1410,55 +1426,13 @@ a {
     }
 
     .contact-section > p{
-        font-size:16px;
-        max-width:650px;
+        font-size:17px;
     }
 
-    .contact-wrapper{
-        grid-template-columns:320px 1fr;
-        gap:25px;
-        margin-top:50px;
+    .contact-card a{
+        overflow-wrap:anywhere;
     }
 
-    .contact-card{
-        padding:20px;
-        gap:15px;
-    }
-
-    .contact-card span{
-        width:55px;
-        height:55px;
-        font-size:20px;
-        flex-shrink:0;
-    }
-
-    .contact-card h4{
-        font-size:18px;
-    }
-
-    .contact-card p{
-        font-size:14px;
-        word-break:break-word;
-    }
-
-    .contact-form{
-        padding:30px;
-    }
-
-    .contact-form input,
-    .contact-form textarea{
-        padding:16px 18px;
-        font-size:15px;
-    }
-
-    .contact-form textarea{
-        height:160px;
-    }
-
-    .contact-form button{
-        padding:16px 30px;
-        font-size:15px;
-    }
     .experience-section{
         padding:60px 20px;
     }
