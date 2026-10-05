@@ -1103,69 +1103,28 @@ a {
         margin-bottom:18px;
     }
 
-    .contact-section{
-        padding: 60px 15px;
-    }
-
-    .contact-tag{
-        letter-spacing: 3px;
-        font-size: 12px;
-    }
-
-    .contact-section h2{
-        font-size: 32px;
-    }
-
-    .contact-section > p{
-        font-size: 16px;
-    }
-
     .contact-wrapper{
-        margin-top: 40px;
-        gap: 20px;
+        display:flex;
+        flex-direction:column;
+        gap:25px;
     }
 
-    .contact-card{
-        padding: 18px;
-        border-radius: 18px;
-        gap: 15px;
-    }
-
-    .contact-card span{
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-        flex-shrink: 0;
-    }
-
-    .contact-card h4{
-        font-size: 16px;
-    }
-
-    .contact-card p,
-    .contact-card a{
-        font-size: 14px;
-        word-break: break-word;
+    .contact-info{
+        width:100%;
     }
 
     .contact-form{
-        padding: 25px 20px;
-        border-radius: 20px;
+        width:100%;
+        padding:25px 20px;
     }
 
-    .contact-form input,
-    .contact-form textarea{
-        padding: 15px;
-        font-size: 15px;
+    .contact-section h2{
+        font-size:32px;
     }
 
-    .contact-form textarea{
-        height: 140px;
-    }
-
-    .contact-form button{
-        width: 100%;
-        padding: 16px;
+    .contact-card a{
+        display:block;
+        overflow-wrap:anywhere;
     }
 }
 
