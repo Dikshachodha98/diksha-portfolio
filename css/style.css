@@ -764,14 +764,14 @@ a {
     }
 
     .resume-btn{
-        display:none;
+        display:none ;
     }
 
     .hamburger{
         display:flex;
         align-items:center;
         justify-content:center;
-        font-size:15px;
+        font-size:25px;
         cursor:pointer;
         z-index:1001;
     }
@@ -831,7 +831,7 @@ a {
         color:#fff;
     }
     .hero-section{
-        min-height:auto;
+        /* min-height:auto; */
         padding:80px 20px 100px;
     }
 
