@@ -830,6 +830,21 @@ a {
         background:#D97757;
         color:#fff;
     }
+    .mobile-resume a,
+.mobile-resume a:visited,
+.mobile-resume a:hover,
+.mobile-resume a:active {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 28px;
+    border-radius: 10px;
+
+    background: #D97757;
+    color: #fff;
+    text-decoration: none;
+}
     .hero-section{
         min-height:auto;
         padding:80px 20px 100px;
@@ -1129,6 +1144,23 @@ a {
         display:block;
         overflow-wrap:anywhere;
     }
+    .contact-card span {
+        width: 50px;
+        height: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+        background: #D97757;
+        flex-shrink: 0;
+    }
+
+    .contact-card span i {
+        font-size: 20px;
+        color: #fff;
+    }
 }
 
 @media (min-width:768px) and (max-width:1024px){
@@ -1225,6 +1257,21 @@ a {
         background:#D97757;
         color:#fff;
     }
+    .mobile-resume a,
+.mobile-resume a:visited,
+.mobile-resume a:hover,
+.mobile-resume a:active {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 28px;
+    border-radius: 10px;
+
+    background: #D97757;
+    color: #fff;
+    text-decoration: none;
+}
     .hero-section{
         min-height:auto;
         padding:100px 30px 120px;
