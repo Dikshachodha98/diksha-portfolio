@@ -27,3 +27,34 @@ closeMenu.addEventListener('click', () => {
     menu.classList.remove('active');
     hamburger.style.display = 'flex';
 });
+
+
+const viewMoreBtn = document.getElementById("viewMoreBtn");
+
+const projectCards = document.querySelectorAll(
+    ".projects-grid .project-card"
+);
+
+let visibleProjects = 3;
+
+if (projectCards.length <= visibleProjects) {
+    viewMoreBtn.style.display = "none";
+}
+
+viewMoreBtn.addEventListener("click", function () {
+
+    const isExpanded = viewMoreBtn.classList.toggle("expanded");
+
+    projectCards.forEach((card, index) => {
+
+        if (index >= 3) {
+            card.style.display = isExpanded ? "block" : "none";
+        }
+
+    });
+
+    viewMoreBtn.textContent = isExpanded
+        ? "View Less "
+        : "View More Projects ";
+
+});

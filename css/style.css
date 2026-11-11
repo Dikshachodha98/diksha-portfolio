@@ -33,6 +33,7 @@ a {
 }
 
 .hero-wrapper {
+    position: relative; /* ADD THIS */
     min-height: 100vh;
     background-image:
         linear-gradient(rgba(250, 248, 245, 0.95),
@@ -41,6 +42,9 @@ a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+.mobile-menu-logo {
+    display: none;
 }
 .hero-wrapper::after{
     content: '';
@@ -150,7 +154,7 @@ a {
 }
 .hero-content p {
     max-width: 750px;
-    margin: 0 auto 45px;
+    margin: 0 auto 40px;
     font-size: 16px;
     line-height: 1.7;
     color: #6B6B6B;
@@ -159,13 +163,13 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 .primary-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 18px 38px;
+    padding: 22px 38px;
     background: #D97757;
     color: #fff;
     border-radius: 10px;
@@ -180,7 +184,7 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 18px 38px;
+    padding: 19px 38px;
     border: 2px solid #1E0F08;
     color: #1E0F08;
     border-radius: 10px;
@@ -191,6 +195,7 @@ a {
 .secondary-btn:hover {
     background: #1E0F08;
     color: #fff;
+    transform: translateY(-3px);
 }
 .about-section {
     padding: 120px 0;
@@ -374,7 +379,7 @@ a {
 .skills-track{
     display:flex;
     align-items:center;
-    gap:20px;
+    gap:10px;
     width:max-content;
     animation: marquee 25s linear infinite;
 }
@@ -382,7 +387,7 @@ a {
 .skill-item,
 .skills-track span{
     flex-shrink:0;
-    padding:14px 24px;
+    padding:10px 24px;
     font-weight: 500;
     background:#FFF4EF;
     border:1px solid #F3D4C6;
@@ -403,7 +408,7 @@ a {
     animation-play-state: paused;
 }
 .projects-section{
-    padding:120px 0;
+    padding:120px 0 80px;
 }
 
 .projects-tag{
@@ -429,8 +434,9 @@ a {
     margin:0 auto;
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    column-gap: 10px;
+    column-gap: 15px;
     row-gap: 30px;
+    align-items: stretch;
 }
 
 .project-card{
@@ -441,8 +447,13 @@ a {
     display:flex;
     flex-direction:column;
     transition:0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    height: 100%;
 }
-
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
 .project-image{
     overflow:hidden;
 }
@@ -454,12 +465,14 @@ a {
     transition:0.5s ease;
 }
 
-.project-content{
-    padding:30px;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    flex:1;
+.project-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    min-height: 280px;
+    justify-content: flex-start;
 }
 
 .project-category{
@@ -482,12 +495,12 @@ a {
     margin-bottom:15px;
 }
 
-.project-content p{
-    font-size:15px;
-    line-height:1.8;
-    color:#666;
-
-    margin-bottom:25px;
+.project-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 25px;
+    /* flex: 1; */
 }
 
 .project-btn{
@@ -500,6 +513,32 @@ a {
     font-size:16px;
     font-weight:700;
     transition:0.3s ease;
+}
+
+.project-card:nth-child(n+4) {
+    display: none;
+}
+
+.projects-more {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.view-more-btn {
+    background: #D97757;
+    color: #fff;
+    border: none;
+    padding: 15px 32px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background: #c56547;
+    transform: translateY(-3px);
 }
 
 .experience-section{
@@ -570,7 +609,7 @@ a {
 .experience-right{
     display:flex;
     flex-direction:column;
-    gap:50px;
+    gap:40px;
 }
 
 .experience-item{
@@ -718,7 +757,7 @@ a {
     background:#F7EEEA;
     border:1px solid #F0D4C7;
     border-radius:30px;
-    padding:40px;
+    padding:30px 40px 20px;
 }
 
 .contact-form input,
@@ -734,7 +773,7 @@ a {
 }
 
 .contact-form textarea{
-    height:180px;
+    height:150px;
     resize:none;
 }
 
@@ -750,6 +789,27 @@ a {
 }
 @media (max-width:767px){
 
+    .mobile-menu-logo {
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 20px;
+    }
+    
+    .mobile-menu-logo img {
+        width: 130px;
+        height: auto;
+    }
+    
+    .close-menu {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1002;
+    }
     .header-wrapper{
         padding:20px 0;
     }
@@ -787,7 +847,7 @@ a {
         flex-direction:column;
         justify-content:center;
         align-items:center;
-        gap:30px;
+        gap:25px;
         margin:0;
         padding:0;
         transform:translateX(100%);
@@ -800,25 +860,26 @@ a {
     }
 
     .menu a{
-        font-size:16px;
+        font-size:18px;
         font-weight:600;
     }
 
-    .close-menu{
-        display:block;
-        list-style:none;
-        z-index:1002;
-        position:absolute;
-        top:25px;
-        right:25px;
-        font-size:22px;
-        cursor:pointer;
-    }
+    .close-menu {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 25px;
+    font-size: 32px;
+    font-weight: 400;
+    cursor: pointer;
+    z-index: 1002;
+    color: #1E0F08;
+}
 
     .mobile-resume{
         display:block;
         list-style:none;
-        margin-top:10px;
+        margin-top:15px;
     }
 
     .mobile-resume a{
@@ -845,9 +906,12 @@ a {
     color: #fff;
     text-decoration: none;
 }
+.hero-wrapper {
+    background-position: center top;
+}
     .hero-section{
         min-height:auto;
-        padding:80px 20px 100px;
+        padding:150px 20px 100px;
     }
     .hero-wrapper::after
     {
@@ -859,13 +923,13 @@ a {
 
     .hero-tag{
         font-size:12px;
-        letter-spacing:3px;
+        letter-spacing:2px;
         margin-bottom:20px;
         line-height:1.6;
     }
 
     .hero-content h1{
-        font-size:38px;
+        font-size:36px;
         line-height:1.15;
         margin-bottom:20px;
     }
@@ -886,7 +950,7 @@ a {
         width:100%;
         max-width:280px;
         padding:16px 24px;
-        font-size:14px;
+        font-size:15px;
     }
     .about-section
     {
