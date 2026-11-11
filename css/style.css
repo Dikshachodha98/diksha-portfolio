@@ -1184,7 +1184,10 @@ a {
     .company{
         margin-bottom:18px;
     }
-
+    .contact-section
+    {
+        padding:80px 10px;
+    }
     .contact-wrapper{
         display:flex;
         flex-direction:column;
@@ -1203,10 +1206,13 @@ a {
     .contact-section h2{
         font-size:32px;
     }
-
+    .contact-section p{
+        font-size: 14px;
+    }
     .contact-card a{
         display:block;
         overflow-wrap:anywhere;
+        font-size: 14px;
     }
     .contact-card span {
         width: 50px;
